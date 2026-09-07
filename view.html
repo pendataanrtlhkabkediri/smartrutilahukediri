@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rekap Konfirmasi - SMART RUTILAHU</title>
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap.min.css">
 <style>
   :root{
     --primary:#2563eb;
@@ -217,8 +217,8 @@
 
 </div>
 
-<script src="assets/js/rutilahu-config.js"></script>
-<script src="assets/js/rutilahu-sheet-api.js"></script>
+<script src="rutilahu-config.js"></script>
+<script src="rutilahu-sheet-api.js"></script>
 <script>
 (function(){
   "use strict";
@@ -255,7 +255,7 @@
   function loadData(){
     sourceInfo.textContent = "Memuat data...";
     if (!SHEET_API_URL) {
-      sourceInfo.textContent = "⚠️ SHEET_API_URL belum diisi di assets/js/rutilahu-config.js.";
+      sourceInfo.textContent = "⚠️ SHEET_API_URL belum diisi di rutilahu-config.js.";
       emptyText.textContent = "Konfigurasi belum lengkap, belum ada data yang bisa ditampilkan.";
       return Promise.resolve([]);
     }
