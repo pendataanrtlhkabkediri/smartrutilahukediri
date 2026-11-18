@@ -138,6 +138,75 @@
     padding:24px 20px;
   }
 
+  /* Pemutakhiran data RTLH */
+  .notice-intro{
+    color:var(--muted);
+    font-size:.94rem;
+    line-height:1.7;
+    margin-bottom:18px;
+  }
+  .notice-list{
+    display:grid;
+    gap:12px;
+  }
+  .notice-link{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:15px;
+    border:1px solid #dbe2ef;
+    border-radius:14px;
+    color:var(--text);
+    text-decoration:none;
+    background:#fff;
+    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+  }
+  .notice-link:hover{
+    color:var(--text);
+    border-color:#93c5fd;
+    box-shadow:0 5px 14px rgba(37,99,235,.10);
+    transform:translateY(-2px);
+  }
+  .notice-link .notice-icon{
+    flex:0 0 44px;
+    width:44px;height:44px;
+    display:flex;align-items:center;justify-content:center;
+    border-radius:12px;
+    background:#e0e7ff;
+    font-size:1.35rem;
+  }
+  .notice-link .notice-copy{min-width:0;flex:1;}
+  .notice-link strong{
+    display:block;
+    font-size:.91rem;
+    line-height:1.4;
+    margin-bottom:3px;
+  }
+  .notice-link small{
+    display:block;
+    color:var(--muted);
+    font-size:.79rem;
+    line-height:1.45;
+  }
+  .notice-link .notice-arrow{
+    color:var(--primary);
+    font-size:1.2rem;
+    font-weight:800;
+  }
+  .deadline{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:16px;
+    padding:15px 16px;
+    border:1px solid #fed7aa;
+    border-radius:14px;
+    background:#fff7ed;
+    color:#9a3412;
+  }
+  .deadline strong{display:block;font-size:.92rem;}
+  .deadline small{display:block;font-size:.8rem;color:#c2410c;}
+
   /* form */
   label.form-label{
     font-weight:600;
@@ -287,6 +356,10 @@
     <p class="lead">Layanan konfirmasi pendaftaran akun, informasi zoom, dan panduan program Rumah Tidak Layak Huni.</p>
 
     <div class="home-grid">
+      <a href="#pemutakhiran" class="home-btn">
+        <span class="icon">📋</span>
+        <span>Pemutakhiran Data RTLH</span>
+      </a>
       <a href="#konfirmasi" class="home-btn">
         <span class="icon">📝</span>
         <span>Konfirmasi Pendaftaran</span>
@@ -307,7 +380,64 @@
   </div>
 </section>
 
-<!-- ============ SECTION 1: KONFIRMASI ============ -->
+<!-- ============ SECTION 1: PEMUTAKHIRAN DATA RTLH ============ -->
+<section id="pemutakhiran" class="block">
+  <div class="container-narrow">
+    <span class="section-tag">01 · Informasi Penting</span>
+    <h2 class="section-title">Pemutakhiran Data RTLH Tahun 2027</h2>
+    <p class="notice-intro">
+      Dalam rangka persiapan Program Bedah Rumah / BSPS Tahun 2027 ke Kementerian
+      Perumahan dan Kawasan Permukiman, perlu dilakukan pemutakhiran data Rumah
+      Tidak Layak Huni (RTLH) di SMART RUTILAHU.
+    </p>
+    <p class="notice-intro">
+      Berikut kami sampaikan format permintaan data export RTLH Desa dan format
+      permohonan penghapusan data RTLH di SMART RUTILAHU, serta formulir permohonan
+      reset MFA.
+    </p>
+
+    <div class="card-panel">
+      <div class="notice-list">
+        <a class="notice-link" href="https://forms.gle/JuTWcieLUfTqt43V7" target="_blank" rel="noopener noreferrer">
+          <span class="notice-icon">📥</span>
+          <span class="notice-copy">
+            <strong>Permohonan Permintaan Data Export RTLH Desa</strong>
+            <small>Isi formulir untuk mengajukan permintaan data export RTLH Desa.</small>
+          </span>
+          <span class="notice-arrow">↗</span>
+        </a>
+
+        <a class="notice-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeWpwbJflrMA6g5ubmgt6D1YW0MMpBft3zP3osjxFAtNgujpw/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
+          <span class="notice-icon">🗑️</span>
+          <span class="notice-copy">
+            <strong>Upload Permohonan Fasilitasi Penghapusan Data</strong>
+            <small>Gunakan formulir ini untuk mengunggah permohonan penghapusan data RTLH.</small>
+          </span>
+          <span class="notice-arrow">↗</span>
+        </a>
+
+        <a class="notice-link" href="https://forms.gle/UoRCgZsBRVFPc7ML9" target="_blank" rel="noopener noreferrer">
+          <span class="notice-icon">🔐</span>
+          <span class="notice-copy">
+            <strong>Permohonan Reset MFA</strong>
+            <small>Ajukan reset MFA melalui formulir berikut.</small>
+          </span>
+          <span class="notice-arrow">↗</span>
+        </a>
+      </div>
+
+      <div class="deadline">
+        <span style="font-size:1.6rem" aria-hidden="true">⏰</span>
+        <span>
+          <strong>Batas Periode Upload Penghapusan</strong>
+          <small>20 November 2026</small>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: KONFIRMASI ============ -->
 <section id="konfirmasi" class="block">
   <div class="container-narrow">
     <span class="section-tag">01 · Pendaftaran</span>
@@ -338,10 +468,10 @@
   </div>
 </section>
 
-<!-- ============ SECTION 2: ZOOM ============ -->
+<!-- ============ SECTION 3: ZOOM ============ -->
 <section id="zoom" class="block">
   <div class="container-narrow">
-    <span class="section-tag">02 · Live Zoom</span>
+    <span class="section-tag">03 · Live Zoom</span>
     <h2 class="section-title">Link Zoom Meeting</h2>
     <p class="section-desc">Gabung ke sesi sosialisasi secara langsung melalui Zoom.</p>
 
@@ -358,10 +488,10 @@
   </div>
 </section>
 
-<!-- ============ SECTION 3: TUTORIAL ============ -->
+<!-- ============ SECTION 4: TUTORIAL ============ -->
 <section id="tutorial" class="block">
   <div class="container-narrow">
-    <span class="section-tag">03 · Panduan</span>
+    <span class="section-tag">04 · Panduan</span>
     <h2 class="section-title">Video Tutorial</h2>
     <p class="section-desc">Simak video panduan pendaftaran SMART RUTILAHU, atau unduh materi lengkap di Google Drive.</p>
 
@@ -379,10 +509,10 @@
   </div>
 </section>
 
-<!-- ============ SECTION 4: BANTUAN ============ -->
+<!-- ============ SECTION 5: BANTUAN ============ -->
 <section id="bantuan" class="block">
   <div class="container-narrow">
-    <span class="section-tag">04 · Bantuan</span>
+    <span class="section-tag">05 · Bantuan</span>
     <h2 class="section-title">Butuh Bantuan?</h2>
     <p class="section-desc">Hubungi admin Perkim langsung melalui WhatsApp untuk pertanyaan seputar SMART RUTILAHU.</p>
 
